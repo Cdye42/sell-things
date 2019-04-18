@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+}
+
+.left-side {
+  flex-grow: 1;
+  background-color: aqua;
+}
+.right-side {
+  flex-grow: 5;
+  background-color: rgb(134, 153, 160);
+}
