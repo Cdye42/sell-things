@@ -1,4 +1,4 @@
-// import omit from 'lodash/omit'
+import omit from "lodash/omit";
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import CSSModules from "react-css-modules";

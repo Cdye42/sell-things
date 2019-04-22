@@ -1,0 +1,114 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #668866;
+}
+/*.main {
+  flex-grow: 4;
+  display: flex;
+  flex-direction: row;
+  background-color: #888888;
+}
+
+#main-right {
+  flex-grow: 6;
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+}
+
+#main-left {
+  flex-grow: 3;
+  background-color: gold;
+}
+
+#row1 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: cadetblue;
+}
+#row2 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: cadetblue;
+}
+#row3 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: cadetblue;
+}
+#box1 {
+  width: 20%;
+  height: 70%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: silver;
+}
+#box2 {
+  width: 20%;
+  height: 70%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: silver;
+}
+#box3 {
+  width: 20%;
+  height: 70%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: silver;
+}
+#box4 {
+  width: 20%;
+  height: 70%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: silver;
+}
+#box5 {
+  width: 20%;
+  height: 70%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: silver;
+}
+#box6 {
+  width: 20%;
+  height: 70%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: silver;
+}
+#box7 {
+  width: 20%;
+  height: 70%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: silver;
+}
+#box8 {
+  width: 20%;
+  height: 70%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: silver;
+}
+#box9 {
+  width: 20%;
+  height: 70%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: silver;
+}
+*/

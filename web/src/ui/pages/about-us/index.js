@@ -10,7 +10,8 @@ class AboutUs extends Component {
     super(props);
     this.state = {
       creators: [],
-      creator: {}
+      creator: {},
+      updatedCreator: {}
     };
   }
   componentDidMount() {
@@ -31,24 +32,71 @@ class AboutUs extends Component {
       .get(`/creators/${userhandle}`)
       .then(response => {
         console.log("Here is the creator's information:", response);
-        this.setState({ creator: response.data.creator });
+        this.setState({
+          creator: response.data.creator,
+          updatedCreator: response.data.creator
+        });
       })
       .catch(err => {
         console.log("You clicked on:", userhandle);
       });
   };
-  rederSpotlight = () => {
-    const { creator } = this.state;
+  updateCreator = event => {
+    event.preventDefault();
+    this.setState({
+      updatedCreator: {
+        ...this.state.updatedCreator,
+        firstName: event.target.value
+      }
+    });
+  };
+
+  submitCreatorUpdate = (event,
+  userhandle => {
+    event.preventDefault();
+    axiosWrapper
+      .put(`/creators/${userhandle}`, this.state.updatedCreator)
+      .then(response => {
+        console.log("updated creator response", response);
+      })
+      .catch(err => {
+        console.log("You clicked on:", userhandle);
+      });
+  });
+
+  renderSpotlight = () => {
+    const { creator, updatedCreator } = this.state;
     if (creator && creator.firstName)
       return (
         <div>
           <div>{creator.firstName}</div>
           <div>{creator.email}</div>
+          <form
+            onSubmit={event =>
+              this.submitCreatorUpdate(event, creator.userHandle)
+            }
+          >
+            <input
+              type="text"
+              value={updatedCreator.firstName}
+              placeholder="First Name"
+              onChange={this.updateCreator}
+            />
+            <button
+              type="submit"
+              onClick={event =>
+                this.submitCreatorUpdate(event, creator.userHandle)
+              }
+            >
+              Update Info
+            </button>
+          </form>
         </div>
       );
 
     return null;
   };
+
   render() {
     return (
       <div>
@@ -70,7 +118,7 @@ class AboutUs extends Component {
               })}
             </ol>
           </aside>
-          <div styleName="right-side">{this.rederSpotlight()}</div>
+          <div styleName="right-side">{this.renderSpotlight()}</div>
         </div>
       </div>
     );
