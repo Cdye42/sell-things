@@ -29,10 +29,10 @@ export default class AuthController {
 }
 /*export default class forceChange {
   forceChange = () => {
-    if (firstName==="Ben") {
+    if (creator.firstName==="Ben") {
       const results = forceChange(firstName);
-    res.send (results);
-    creator: return{}
+    res.send ({creator});
+    
     }
   }
 } */
