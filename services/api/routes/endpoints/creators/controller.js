@@ -5,11 +5,14 @@ export default class AuthController {
   constructor(router) {
     router.get("/:id", wrapAsyncFunc(this.creatorSpotlight));
     router.get("/", wrapAsyncFunc(this.creatorsList));
-    router.put("/:id", wrapAsyncFunc(this.updateCreator));
+    router.put("/:id", wrapAsyncFunc(this.changeCreatorDetails));
   }
-  async updateCreator(req, res) {
-    console.log("I am responding to a put request on /creators/:id");
-    res.send({ creator: { firstName: "blah", email: "blah@gmail.com" } });
+  async changeCreatorDetails(req, res) {
+    const { id } = req.params;
+    const { creator } = req.body;
+    console.log("HERE", id, creator);
+
+    res.send({ creator });
   }
 
   async creatorSpotlight(req, res) {
@@ -24,3 +27,12 @@ export default class AuthController {
     res.send({ creators });
   }
 }
+/*export default class forceChange {
+  forceChange = () => {
+    if (firstName==="Ben") {
+      const results = forceChange(firstName);
+    res.send (results);
+    creator: return{}
+    }
+  }
+} */
