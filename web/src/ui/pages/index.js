@@ -7,7 +7,7 @@ import css from "./index.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-import Landing from "./landing";
+import LandingPage from "./landing";
 import Home from "./homepage/";
 import Login from "./login/";
 import AboutUs from "./about-us";
@@ -25,7 +25,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />,
             <Route exact path="/login" component={Login} />,
             <Route exact path="/about-us" component={AboutUs} />
-            <Route exact path="/landing" component={Landing} />
+            <Route exact path="/landing" component={LandingPage} />
             <Route exact path="/sign-out" component={SignOut} />
           </Switch>
         </div>

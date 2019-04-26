@@ -10,11 +10,9 @@ export default class AuthController {
   async changeCreatorDetails(req, res) {
     const { id } = req.params;
     const { creator } = req.body;
-    console.log("HERE", id, creator);
 
     res.send({ creator });
   }
-
   async creatorSpotlight(req, res) {
     const { id } = req.params;
     console.log("ID", id, req.params);
@@ -27,12 +25,3 @@ export default class AuthController {
     res.send({ creators });
   }
 }
-/*export default class forceChange {
-  forceChange = () => {
-    if (creator.firstName==="Ben") {
-      const results = forceChange(firstName);
-    res.send ({creator});
-    
-    }
-  }
-} */
