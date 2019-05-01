@@ -23,8 +23,8 @@ class LandingPage extends Component {
       .catch(err => {
         this.setState({
           items: [
-            { id: "01", name: "hat", price: "$19.99" },
-            { id: "02", name: "shoes", price: "$119.99" }
+            { id: "01", name: "2QNS", price: "$129.99" },
+            { id: "02", name: "1QNS", price: "$109.99" }
           ]
           //  error: true
         });
@@ -38,11 +38,16 @@ class LandingPage extends Component {
           results:{" "}
           <ol>
             {this.state.items.map((item, index) => {
-              return <li key={index} />;
+              return (
+                <li key={index}>
+                  {item.name}
+                  {item.price}{" "}
+                </li>
+              );
             })}
           </ol>
-          <div id="id01">Item 1</div>
-          <div id="id02">Item 2</div>
+          <li id="id01" />
+          <div id="id02" />
         </div>
       );
     if ((this.state.error = true))

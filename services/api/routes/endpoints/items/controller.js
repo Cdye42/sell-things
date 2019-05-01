@@ -7,10 +7,7 @@ export default class ItemsController {
 
   async getAllItems(req, res) {
     const { items } = req.body;
-    const results = await items[
-      ({ id: "01", name: "hat", price: "$19.99" },
-      { id: "02", name: "shoes", price: "$119.99" })
-    ];
+    const results = await getAllItems;
     res.send({ results });
   }
 }
