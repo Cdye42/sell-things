@@ -7,11 +7,8 @@ if not exists items
 (),
     checkin_date text not null,
     checkout_date text not null,
-    smoking text not null,
     number_of_guests text not null,
     number_of_beds text not null,
-    wheelchair text,
-    hearing_impaired text,
     suite text,
     time_reservation_made timestamp
 

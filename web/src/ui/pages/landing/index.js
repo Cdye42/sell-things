@@ -35,8 +35,7 @@ class LandingPage extends Component {
     if (this.state.items.length > 0)
       return (
         <div styleName="container">
-          results:{" "}
-          <ol>
+          <div>
             {this.state.items.map((item, index) => {
               return (
                 <li key={index}>
@@ -45,9 +44,21 @@ class LandingPage extends Component {
                 </li>
               );
             })}
-          </ol>
-          <li id="id01" />
-          <div id="id02" />
+          </div>
+          <div id="row1">
+            <div id="id01" />
+            <div id="id02" />
+            <div id="id03" />
+          </div>
+          <div id="row2">
+            <div id="id04" />
+            <div id="id05" />
+            <div id="id06" />
+          </div>
+          <div id="row3">
+            <div id="id07" />
+            <div id="id08" />
+          </div>
         </div>
       );
     if ((this.state.error = true))
