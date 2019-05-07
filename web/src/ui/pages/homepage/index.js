@@ -29,8 +29,6 @@ class Homepage extends Component {
 
     return (
       <div styleName="homepage-container">
-        <Link to="/about-us">About Us</Link>
-
         <Link to="/itempage">Item Page</Link>
         <div styleName="daily-message">{messageOfTheDay}</div>
       </div>

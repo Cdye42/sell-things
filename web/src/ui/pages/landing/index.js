@@ -13,7 +13,6 @@ class LandingPage extends Component {
     };
   }
   componentDidMount() {
-    //console.log("hey");
     axiosWrapper
       .get("/items")
       .then(response => {
@@ -22,10 +21,7 @@ class LandingPage extends Component {
       })
       .catch(err => {
         this.setState({
-          items: [
-            { id: "01", name: "NQQ1", price: "$129.99" },
-            { id: "02", name: "NQ1", price: "$109.99" }
-          ]
+          items: []
           //  error: true
         });
       });

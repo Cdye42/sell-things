@@ -7,7 +7,7 @@ export default class ItemsController {
   }
 
   async getAllItems(req, res) {
-    const items = await fetchItems;
+    const items = await fetchItems();
     res.send({ items });
   }
 }
