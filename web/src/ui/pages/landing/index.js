@@ -23,8 +23,8 @@ class LandingPage extends Component {
       .catch(err => {
         this.setState({
           items: [
-            { id: "01", name: "2QNS", price: "$129.99" },
-            { id: "02", name: "1QNS", price: "$109.99" }
+            { id: "01", name: "NQQ1", price: "$129.99" },
+            { id: "02", name: "NQ1", price: "$109.99" }
           ]
           //  error: true
         });

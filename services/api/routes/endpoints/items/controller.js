@@ -1,4 +1,5 @@
 import { wrapAsyncFunc } from "../../../utils/wrap-async-route";
+import { fetchItems } from "../../commands/items";
 
 export default class ItemsController {
   constructor(router) {
@@ -6,8 +7,7 @@ export default class ItemsController {
   }
 
   async getAllItems(req, res) {
-    const { items } = req.body;
-    const results = await getAllItems;
-    res.send({ results });
+    const items = await fetchItems;
+    res.send({ items });
   }
 }
