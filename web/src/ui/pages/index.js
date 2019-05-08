@@ -12,7 +12,7 @@ import Home from "./homepage/";
 import Login from "./login/";
 import AboutUs from "./about-us";
 import SignOut from "./sign-out";
-import ItemDetailPage from "./item-detail/";
+import ItemDetail from "./item-detail/";
 import ItemPage from "./itempage/";
 
 class App extends Component {
@@ -29,7 +29,7 @@ class App extends Component {
             <Route exact path="/about-us" component={AboutUs} />
             <Route exact path="/landing" component={LandingPage} />
             <Route exact path="/sign-out" component={SignOut} />
-            <Route exact path="/item-detail" component={ItemDetailPage} />
+            <Route exact path="/items/:id" component={ItemDetail} />
           </Switch>
         </div>
         <div styleName="footer-container">

@@ -3,63 +3,39 @@ import CSSModules from "react-css-modules";
 import * as axiosWrapper from "../../../utilities/axios/wrapper";
 import css from "./index.css";
 import { protectedRoute } from "../../../process/users/auth";
+import { Link } from "react-router-dom";
 
 class LandingPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [],
-      error: false
+      items: []
     };
   }
   componentDidMount() {
     axiosWrapper
       .get("/items")
       .then(response => {
-        console.log("got items", results);
-        this.setState({ items: response.data.results });
+        console.log("What did we get from the backend", response);
+        this.setState({ items: response.data.items });
       })
       .catch(err => {
-        this.setState({
-          items: []
-          //  error: true
-        });
+        console.log("Something bad happened", err);
       });
   }
 
   render() {
-    if (this.state.items.length > 0)
-      return (
-        <div styleName="container">
-          <div>
-            {this.state.items.map((item, index) => {
-              return (
-                <li key={index}>
-                  {item.name}
-                  {item.price}{" "}
-                </li>
-              );
-            })}
+    const { items } = this.state;
+    return (
+      <div>
+        this is our landing page
+        {items.map((item, index) => (
+          <div key={index}>
+            <Link to={`/items/${item.itemHandle}`}>{item.name}</Link>
           </div>
-          <div id="row1">
-            <div id="id01" />
-            <div id="id02" />
-            <div id="id03" />
-          </div>
-          <div id="row2">
-            <div id="id04" />
-            <div id="id05" />
-            <div id="id06" />
-          </div>
-          <div id="row3">
-            <div id="id07" />
-            <div id="id08" />
-          </div>
-        </div>
-      );
-    if ((this.state.error = true))
-      return console.log("if statement error is true");
-    else return <div>null</div>;
+        ))}
+      </div>
+    );
   }
 }
 

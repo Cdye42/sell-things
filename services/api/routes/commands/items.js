@@ -3,10 +3,10 @@ import { fetchItemsFromDB } from "../repositories/items";
 
 let loggedIn = true;
 
-export async function fetchItems(items) {
-  console.log("New item I am trying to get", items);
+export async function fetchItems() {
   if (loggedIn) {
     try {
+      console.log("HERE WE ARE 2");
       const results = await fetchItemsFromDB();
       return results;
     } catch (err) {

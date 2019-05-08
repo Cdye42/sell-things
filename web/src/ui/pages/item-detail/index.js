@@ -2,11 +2,15 @@ import React, { Component } from "react";
 import CSSModules from "react-css-modules";
 
 import css from "./index.css";
-import autoLogin from "../../../process/users/auth/auto-login";
+import { protectedRoute } from "../../../process/users/auth";
 
-class ItemDetailPage extends Component {
+class ItemDetail extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   render() {
-    return <div styleName="homepage-container">Item-detail page here</div>;
+    return <div>Here is some item</div>;
   }
 }
-export default autoLogin(CSSModules(ItemDetailPage, css));
+export default protectedRoute(CSSModules(ItemDetail, css));
