@@ -1,5 +1,8 @@
 import { StatusError } from "../../utils/errors";
-import { fetchItemsFromDB } from "../repositories/items";
+import {
+  fetchItemsFromDB,
+  fetchItemDetailsFromDB
+} from "../repositories/items";
 
 let loggedIn = true;
 
@@ -15,4 +18,9 @@ export async function fetchItems() {
   } else {
     throw new StatusError({ msg: "User is not logged in", status: 400 });
   }
+}
+export async function fetchDetails(id) {
+  // do business logic later
+  const item = await fetchItemDetailsFromDB(id);
+  return item;
 }

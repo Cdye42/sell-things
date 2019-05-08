@@ -13,7 +13,6 @@ import Login from "./login/";
 import AboutUs from "./about-us";
 import SignOut from "./sign-out";
 import ItemDetail from "./item-detail/";
-import ItemPage from "./itempage/";
 
 class App extends Component {
   render() {
