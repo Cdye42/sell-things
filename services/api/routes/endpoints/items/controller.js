@@ -4,7 +4,8 @@ import { fetchItems, fetchDetails } from "../../commands/items";
 export default class ItemsController {
   constructor(router) {
     router.get("/", wrapAsyncFunc(this.getAllItems));
-    router.get("/:id", wrapAsyncFunc(this.getItemDetails));
+    //  router.get("/:id", wrapAsyncFunc(this.getItemDetails));
+    //  router.get("/:id/seller_id", wrapAsyncFunc(this.getItemDetails));
   }
 
   async getAllItems(req, res) {
